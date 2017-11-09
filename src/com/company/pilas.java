@@ -6,6 +6,7 @@ package com.company;
 public class pilas {
 
     private nodo top;
+    private int tamaño;
 
     public pilas()
     {
@@ -16,6 +17,10 @@ public class pilas {
     {
         return (top==null);
     }
+    public int getTamaño() {
+        return tamaño;
+    }
+
 
     public void push (int valor) //inserta valor en la pila
     {
@@ -27,8 +32,10 @@ public class pilas {
             nuevoNodo.setProx(top);
             top = nuevoNodo;
         }
-
+        tamaño++;
     }
+
+
    public void peek() //muestra los datos de la pila
    {
        nodo temp = top;
